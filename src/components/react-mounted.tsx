@@ -1,7 +1,7 @@
-import { FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 // More info https://www.joshwcomeau.com/react/the-perils-of-rehydration/
-export default function ClientOnly({ children, ...delegated }: any) {
+export default function ReactMounted({ children, ...delegated }: any) {
   const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {

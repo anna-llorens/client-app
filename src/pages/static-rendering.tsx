@@ -1,5 +1,8 @@
 import { gql } from "@apollo/client";
 import client from "../../apollo-client";
+import { Country } from "@/types";
+import { AppSection, Header } from "@/components";
+import { styled } from "styled-components";
 
 export async function getStaticProps() {
   const { data } = await client.query({
@@ -16,15 +19,28 @@ export async function getStaticProps() {
 
   return {
     props: {
-      countries: data.countries.slice(0, 4),
+      countries: data.countries.slice(0, 2),
     },
   };
 }
 
-export default function Login() {
+export default function StaticRenderingPage({
+  countries,
+}: {
+  countries: Country[];
+}) {
   return (
-    <div>
-      <h1>Login page</h1>
-    </div>
+    <AppSection>
+      <h1>Static rendering test</h1>
+      <h3>This runs getStaticProps()</h3>
+      {countries.map((country) => (
+        <div key={country.code}>
+          <h3>{country.name}</h3>
+          <p>
+            {country.code} - {country.emoji} - {country.emoji}
+          </p>
+        </div>
+      ))}
+    </AppSection>
   );
 }

@@ -23,7 +23,7 @@ export default function Countries() {
     return null;
   }
 
-  const countries: Country[] = data.countries.slice(0, 4);
+  const countries: Country[] = data.countries.slice(0, 10);
 
   return (
     <div>

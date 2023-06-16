@@ -1,6 +1,7 @@
 import { gql } from "@apollo/client";
 import client from "../../apollo-client";
 import { Country } from "@/types";
+import { AppSection } from "@/components";
 
 export async function getServerSideProps() {
   const { data } = await client.query({
@@ -22,11 +23,13 @@ export async function getServerSideProps() {
   };
 }
 
-export default function Home({ countries }: { countries: Country[] }) {
-  console.log(countries);
-
+export default function ServerSidePage({
+  countries,
+}: {
+  countries: Country[];
+}) {
   return (
-    <div>
+    <AppSection>
       <h1>Server side test</h1>
       <h3>This runs getServerSideProps()</h3>
       {countries.map((country) => (
@@ -37,6 +40,6 @@ export default function Home({ countries }: { countries: Country[] }) {
           </p>
         </div>
       ))}
-    </div>
+    </AppSection>
   );
 }

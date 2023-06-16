@@ -9,6 +9,6 @@ const Title = styled.h3`
 
 export const HeaderTitle: FC = () => (
   <Link href={Routes.Home}>
-    <Title>AERVIO</Title>
+    <Title>APP NANE</Title>
   </Link>
 );
