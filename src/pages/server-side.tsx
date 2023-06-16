@@ -1,7 +1,8 @@
 import { gql } from "@apollo/client";
 import client from "../../apollo-client";
+import { Country } from "@/types";
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const { data } = await client.query({
     query: gql`
       query Countries {
@@ -21,11 +22,13 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ countries }) {
+export default function Home({ countries }: { countries: Country[] }) {
+  console.log(countries);
+
   return (
     <div>
-      <h1>Static rendering test</h1>
-      <h3>This runs getStaticProps()</h3>
+      <h1>Server side test</h1>
+      <h3>This runs getServerSideProps()</h3>
       {countries.map((country) => (
         <div key={country.code}>
           <h3>{country.name}</h3>
