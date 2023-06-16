@@ -1,4 +1,4 @@
-## Setup project
+## Setup node dependencies
 
 1. Create Next.js repo with Typescript as templated
 
@@ -6,7 +6,7 @@
 npx create-next-app@latest app-name
 ```
 
-2. Install yarn dependencies
+2. Install yarn dependencies + remove default `package.lock.json`
 
 ```bash
 yarn
@@ -27,11 +27,9 @@ yarn add styled-components
 - Add config to `package.json`
 
 ```json
-// ...
  "resolutions": {
     "styled-components": "^5"
   },
-// ...
 ```
 
 - Add babel plugin to compile the styled-components naming
@@ -40,7 +38,7 @@ yarn add styled-components
  yarn add babel-plugin-styled-components --dev
 ```
 
-- Add babel config in `.babelrc` file
+- Add babel config in `.babelrc` file at route folder
 
 ```json
 {
