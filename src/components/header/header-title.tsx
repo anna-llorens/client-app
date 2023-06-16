@@ -4,11 +4,11 @@ import { FC } from "react";
 import styled from "styled-components";
 
 const Title = styled.h3`
-  color: blue;
+  color: white;
 `;
 
 export const HeaderTitle: FC = () => (
   <Link href={Routes.Home}>
-    <Title>AERVIO LOGO</Title>
+    <Title>AERVIO</Title>
   </Link>
 );

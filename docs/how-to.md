@@ -43,6 +43,39 @@ yarn add styled-components
 ```json
 {
   "presets": ["next/babel"],
-  "plugins": [["styled-components", { "ssr": true, "displayName": true }]]
+  "plugins": [
+    [
+      "styled-components",
+      {
+        "ssr": true,
+        "displayName": true,
+        "preprocess": false
+      }
+    ]
+  ]
 }
 ```
+
+- Add new `_document.tsx` to parse the styled-component css clases
+
+````Typescript
+static async getInitialProps(
+    ctx: DocumentContext
+  ): Promise<DocumentInitialProps> {
+    const initialProps = await Document.getInitialProps(ctx);
+    const sheet = new ServerStyleSheet();
+    const page = ctx.renderPage(
+      (App) => (props) => sheet.collectStyles(<App {...props} />)
+    );
+    const styleTags = sheet.getStyleElement();
+    return { ...initialProps, ...page, ...styleTags };
+  }
+  // ...
+    render(): JSX.Element {
+    return (
+      <Html>
+        {/* <Head>{this.props.styleTags}</Head> */}
+        <Head>{this.props.styleTags}</Head>
+  // ...
+```
+````
