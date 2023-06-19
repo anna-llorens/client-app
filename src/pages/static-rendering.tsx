@@ -1,27 +1,9 @@
-import { gql } from "@apollo/client";
-import client from "../../apollo-client";
 import { Country } from "@/types";
-import { AppSection, Header } from "@/components";
-import { styled } from "styled-components";
+import { AppSection } from "@/components";
+import { getCountries } from "@/graphql";
 
 export async function getStaticProps() {
-  const { data } = await client.query({
-    query: gql`
-      query Countries {
-        countries {
-          code
-          name
-          emoji
-        }
-      }
-    `,
-  });
-
-  return {
-    props: {
-      countries: data.countries.slice(0, 2),
-    },
-  };
+  return getCountries(4);
 }
 
 export default function StaticRenderingPage({

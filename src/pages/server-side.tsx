@@ -2,18 +2,11 @@ import { gql } from "@apollo/client";
 import client from "../../apollo-client";
 import { Country } from "@/types";
 import { AppSection } from "@/components";
+import { GET_COUNTRIES } from "@/graphql/querys";
 
 export async function getServerSideProps() {
   const { data } = await client.query({
-    query: gql`
-      query Countries {
-        countries {
-          code
-          name
-          emoji
-        }
-      }
-    `,
+    query: GET_COUNTRIES,
   });
 
   return {
