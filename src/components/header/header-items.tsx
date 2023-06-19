@@ -1,9 +1,9 @@
-import { Routes } from "@/types";
 import { HeaderTitle } from "./header-title";
 import { styled } from "styled-components";
 import { HeaderLink } from "./header-link";
-import { useLogout } from "@/hooks";
+import { useCurrentUser, useLogout } from "@/hooks";
 import { useRouter } from "next/router";
+import { Routes } from "@/router";
 
 const HeaderItemsWrapper = styled.div`
   display: flex;
@@ -21,6 +21,7 @@ const HeaderLinks = styled.div`
 `;
 
 export const HeaderItems = () => {
+  const { user } = useCurrentUser();
   const { logout } = useLogout();
   const router = useRouter();
   return (
@@ -30,16 +31,16 @@ export const HeaderItems = () => {
         <HeaderLink route={Routes.ClientSide} label="Client side" />
         <HeaderLink route={Routes.ServerSide} label="Server side" />
         <HeaderLink route={Routes.StaticRendering} label="Static rendering" />
-
-        <button
-          onClick={() => {
-            logout();
-            router.push(Routes.Logout);
-          }}
-          className="mt-2 border border-solid border-black py-2 px-4 rounded cursor-pointer"
-        >
-          LOGOUT
-        </button>
+        {user ? (
+          <>
+            <HeaderLink route={Routes.Profile} label={"My profile"} />
+            <HeaderLink
+              onClick={() => logout()}
+              route={Routes.Logout}
+              label={"Logout"}
+            />
+          </>
+        ) : null}
       </HeaderLinks>
     </HeaderItemsWrapper>
   );

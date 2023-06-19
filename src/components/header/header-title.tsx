@@ -1,4 +1,5 @@
-import { Routes } from "@/types";
+
+import { Routes } from "@/router";
 import Link from "next/link";
 import { FC } from "react";
 import styled from "styled-components";

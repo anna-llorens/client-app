@@ -1,14 +1,8 @@
-import { Routes } from "@/types";
+import { Routes } from "@/router";
 import Link from "next/link";
 
-export const HeaderLink = ({
-  route,
-  label,
-}: {
-  route: Routes;
-  label: string;
-}) => (
-  <Link href={route}>
-    <div>{label}</div>
+export const HeaderLink = (props: any) => (
+  <Link href={props?.route}>
+    <div {...props}>{props.label}</div>
   </Link>
 );

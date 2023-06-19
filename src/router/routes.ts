@@ -1,8 +1,22 @@
+export enum Routes {
+  About = "./about",
+  ClientSide = "/client-side",
+  Home = "/home",
+  Logout = "./",
+  Profile = "./profile",
+  ServerSide = "/server-side",
+  StaticRendering = "/static-rendering",
+}
+
 export const protectedRoutes = [
-  "/profile",
-  "/client-side",
-  "server-side",
-  "static-rendering",
+  Routes.Profile,
+  Routes.ClientSide,
+  Routes.ServerSide,
+  Routes.StaticRendering,
 ];
-export const authRoutes = ["/login"];
-export const publicRoutes = ["/about", "/"];
+export const authRoutes = [Routes.Logout];
+export const publicRoutes = [
+  Routes.About,
+  Routes.Logout,
+  Routes.StaticRendering,
+];

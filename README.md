@@ -12,10 +12,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ![plot](./public/app-architechute.png)
 
-## Backlog
+### Backlog
 
 - Translations pipeline
 - Unit Testing
 - Acceptance testing
 - Vercel deployment
 - Connect to backend
+- Improve routing
+
