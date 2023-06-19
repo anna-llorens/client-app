@@ -4,7 +4,7 @@ import { styled } from "styled-components";
 import Head from "next/head";
 
 const HeaderWrapper = styled.header`
-  background-color: #aebac1;
+  background-color: #556cd6;
   position: fixed;
   z-index: 100;
   top: 0;
