@@ -1,6 +1,6 @@
 import { Country } from "@/types";
 import { AppSection } from "@/components";
-import { getCountries } from "@/graphql";
+import { getCountries } from "@/api/graphql";
 
 export async function getStaticProps() {
   return getCountries(4);

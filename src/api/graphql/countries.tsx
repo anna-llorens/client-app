@@ -1,4 +1,4 @@
-import client from "../../apollo-client";
+import client from "../../../apollo-client";
 import { GET_COUNTRIES } from "./querys";
 
 export const getCountries = async (limit = 10) => {

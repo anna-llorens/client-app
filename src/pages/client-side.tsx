@@ -1,6 +1,6 @@
 import { AppSection } from "@/components";
 import { useQuery } from "@apollo/client";
-import { GET_COUNTRIES } from "@/graphql";
+import { GET_COUNTRIES } from "@/api/graphql";
 import { Country } from "@/types";
 
 export default function ClientSide() {
