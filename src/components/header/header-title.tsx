@@ -1,15 +1,19 @@
-
 import { Routes } from "@/router";
 import Link from "next/link";
 import { FC } from "react";
-import styled from "styled-components";
 
-const Title = styled.h3`
-  color: white;
-`;
+import Image from "next/image";
 
 export const HeaderTitle: FC = () => (
-  <Link href={Routes.Home}>
-    <Title>APP NANE</Title>
-  </Link>
+  <div>
+    {/* <Link href={Routes.Home}> */}
+    <Image
+      src="/aervio-logo.png"
+      alt="Company logo"
+      width="150"
+      height="48"
+      style={{ marginTop: "6px" }}
+    />
+    {/* </Link> */}
+  </div>
 );

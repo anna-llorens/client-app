@@ -6,6 +6,7 @@ export enum Routes {
   Profile = "./profile",
   ServerSide = "/server-side",
   StaticRendering = "/static-rendering",
+  Orders = "/orders",
 }
 
 export const protectedRoutes = [
