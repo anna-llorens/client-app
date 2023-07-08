@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 import { FC, useState } from "react";
 import styled from "styled-components";
 import { Header } from "./header";
+import { Footer } from "./footer";
+import { AppSection } from ".";
 
 const LoginWrapper = styled.div`
   display: flex;
@@ -37,8 +39,7 @@ export const Login: FC = () => {
   };
 
   return (
-    <>
-      <Header />
+    <AppSection>
       <LoginWrapper>
         <LoginFormWrapper>
           <h1>Login page</h1>
@@ -62,6 +63,6 @@ export const Login: FC = () => {
           </Button>
         </LoginFormWrapper>
       </LoginWrapper>
-    </>
+    </AppSection>
   );
 };

@@ -3,3 +3,4 @@ export * from "./header";
 export * from "./app-section";
 export * from "./login";
 export * from "./footer";
+export * from "./company-logo";
