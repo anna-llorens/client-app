@@ -1,10 +1,10 @@
 import { createTheme } from "@mui/material/styles";
 import { red } from "@mui/material/colors";
-// Create a theme instance.
+// Customize material UI components
 export const theme = createTheme({
   palette: {
     primary: {
-      main: "#556cd6",
+      main: "#orange",
     },
     secondary: {
       main: "#19857b",

@@ -2,7 +2,7 @@ import { useLogin } from "@/hooks";
 import { TextField, Button } from "@mui/material";
 import { useRouter } from "next/router";
 import { FC, useState } from "react";
-import { styled } from "styled-components";
+import styled from "styled-components";
 import { Header } from "./header";
 
 const LoginWrapper = styled.div`

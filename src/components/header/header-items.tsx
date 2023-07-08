@@ -1,5 +1,5 @@
 import { HeaderTitle } from "./header-title";
-import { styled } from "styled-components";
+import styled from "styled-components";
 import { HeaderLink } from "./header-link";
 import { useCurrentUser, useLogout } from "@/hooks";
 import { useRouter } from "next/router";
@@ -17,7 +17,7 @@ const HeaderLinks = styled.div`
   display: flex;
   gap: 24px;
   justify-content: flex-end;
-  color: white;
+  color: #52575c;
 `;
 
 export const HeaderItems = () => {
@@ -31,6 +31,7 @@ export const HeaderItems = () => {
         <HeaderLink route={Routes.ClientSide} label="Client side" />
         <HeaderLink route={Routes.ServerSide} label="Server side" />
         <HeaderLink route={Routes.StaticRendering} label="Static rendering" />
+        <HeaderLink route={Routes.Orders} label="Orders" />
         {user ? (
           <>
             <HeaderLink route={Routes.Profile} label={"My profile"} />
