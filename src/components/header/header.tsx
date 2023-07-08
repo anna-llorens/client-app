@@ -1,7 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
 import Head from "next/head";
-import { HeaderLink } from "./header-link";
 import { HeaderTitle } from "./header-title";
 import { useCurrentUser, useLogout } from "@/hooks";
 import { HeaderLinks } from "./header-links";

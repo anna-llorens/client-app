@@ -4,6 +4,7 @@ import { FC, useEffect, useState } from "react";
 
 import Image from "next/image";
 import { useCurrentUser } from "@/hooks";
+import { CompanyLogo } from "../company-logo";
 
 export const HeaderTitle = () => {
   const { user } = useCurrentUser();
@@ -15,16 +16,8 @@ export const HeaderTitle = () => {
   }, [user]);
 
   return (
-    <div>
-      <Link href={route}>
-        <Image
-          src="/aervio-logo.png"
-          alt="Company logo"
-          width="150"
-          height="48"
-          style={{ marginTop: "6px" }}
-        />
-      </Link>
-    </div>
+    <Link href={route}>
+      <CompanyLogo />
+    </Link>
   );
 };
