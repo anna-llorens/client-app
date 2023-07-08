@@ -6,7 +6,8 @@ import { DataGrid } from "@mui/x-data-grid";
 import { columns, rows } from "./kanban-data";
 
 const KanbanContainer = styled.div`
-  height: 700px;
+  height: 650px;
+
   overflow-y: auto;
   display: flex;
   flex-direction: row;
