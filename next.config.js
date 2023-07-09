@@ -8,4 +8,8 @@ module.exports = withTM({
   experimental: {
     esmExternals: "loose",
   },
+  i18n: {
+    locales: ["en-US", "es"],
+    defaultLocale: "en-US",
+  },
 });

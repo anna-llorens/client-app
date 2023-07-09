@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.15",
+    "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.11.16",
@@ -26,12 +27,15 @@
     "eslint-config-next": "13.4.6",
     "fix-esm": "^1.0.1",
     "graphql": "^16.6.0",
+    "i18next": "^23.2.8",
     "js-cookie": "^3.0.5",
     "next": "13.4.6",
     "next-auth": "^4.22.1",
+    "next-i18next": "^14.0.0",
     "next-transpile-modules": "^10.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-i18next": "^13.0.1",
     "recharts": "^2.7.2",
     "styled-components": "^6.0.3",
     "typescript": "5.1.3"

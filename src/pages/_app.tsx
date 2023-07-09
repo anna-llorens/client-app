@@ -14,6 +14,7 @@ export default function App({ Component, pageProps }: any) {
         <ReactMounted>
           <ThemeProvider theme={theme}>
             <CssBaseline />
+
             <Component {...pageProps} />
           </ThemeProvider>
         </ReactMounted>
