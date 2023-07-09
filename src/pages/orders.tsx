@@ -1,7 +1,6 @@
 import {
   AppSection,
   BaBarChartStatus,
-  LineChartStatus,
   StatusPieChart,
   Widget,
 } from "@/components";
@@ -27,9 +26,6 @@ export default function Orders() {
         </Widget>
         <Widget title="Incoming request">
           <BaBarChartStatus />
-        </Widget>
-        <Widget title="Resolved querys">
-          <LineChartStatus />
         </Widget>
       </Container>
     </AppSection>
