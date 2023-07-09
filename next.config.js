@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-module.exports = nextConfig;
+const withTM = require("next-transpile-modules")(["@mui/x-charts/BarChart"]);
+module.exports = withTM({
+  experimental: {
+    esmExternals: "loose",
+  },
+});

@@ -24,8 +24,6 @@ const HeaderItemsWrapper = styled.div`
 export const Header: FC<{ appTitle?: string }> = ({
   appTitle = "Aervio Booking Platform",
 }) => {
-  const { user } = useCurrentUser();
-  const { logout } = useLogout();
   return (
     <HeaderWrapper>
       <Head>

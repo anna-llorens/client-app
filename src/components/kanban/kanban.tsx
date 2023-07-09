@@ -7,7 +7,7 @@ import { columns, rows } from "./kanban-data";
 
 const KanbanContainer = styled.div`
   height: 650px;
-
+  min-width: 700px;
   overflow-y: auto;
   display: flex;
   flex-direction: row;

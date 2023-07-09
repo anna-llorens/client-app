@@ -4,6 +4,7 @@ import { useCurrentUser, useLogout } from "@/hooks";
 import { useRouter } from "next/router";
 import { Routes } from "@/router";
 import Link from "next/link";
+import { HeaderDropdownItem } from "./header-dropdown-item";
 
 const HeaderLinksContainer = styled.div`
   display: flex;
@@ -12,7 +13,7 @@ const HeaderLinksContainer = styled.div`
   color: #52575c;
 `;
 
-const HeaderLink = (props: any) => (
+export const HeaderLink = (props: any) => (
   <Link href={props?.route}>
     <div {...props}>{props.label}</div>
   </Link>
@@ -24,10 +25,7 @@ export const HeaderLinks = () => {
   const router = useRouter();
   return (
     <HeaderLinksContainer>
-      <HeaderLink route={Routes.ClientSide} label="Client side" />
-      <HeaderLink route={Routes.ServerSide} label="Server side" />
-      <HeaderLink route={Routes.StaticRendering} label="Static rendering" />
-
+      <HeaderDropdownItem title="Dev tools" />
       {user ? (
         <>
           <HeaderLink route={Routes.Orders} label="Orders" />

@@ -1,9 +1,14 @@
-import { AppSection, Widget } from "@/components";
+import {
+  AppSection,
+  BaBarChartStatus,
+  LineChartStatus,
+  StatusPieChart,
+  Widget,
+} from "@/components";
 import { Kanban } from "@/components/kanban";
 import { useTheme } from "@mui/material/styles";
 import styled from "styled-components";
 
-const WidgetContainer = styled.div``;
 const Container = styled.div`
   display: flex;
 `;
@@ -17,9 +22,15 @@ export default function Orders() {
       <h1>Orders kanban</h1>
       <Container>
         <Kanban />
-        <WidgetContainer>
-          <Widget title="Orders status" />
-        </WidgetContainer>
+        <Widget title="Orders status">
+          <StatusPieChart />
+        </Widget>
+        <Widget title="Incoming request">
+          <BaBarChartStatus />
+        </Widget>
+        <Widget title="Resolved querys">
+          <LineChartStatus />
+        </Widget>
       </Container>
     </AppSection>
   );

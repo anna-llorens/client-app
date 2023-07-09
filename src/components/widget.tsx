@@ -15,9 +15,14 @@ const WidgetContainer = styled.div`
   margin-inline: 16px;
 `;
 
-export const Widget: FC<{ title: string }> = ({ title }) => (
-  <WidgetContainer>
-    <h4>{title}</h4>
-    <StatusPieChart />
-  </WidgetContainer>
+export const Widget: FC<{ title: string; children: any }> = ({
+  title,
+  children,
+}) => (
+  <div>
+    <WidgetContainer>
+      <h4>{title}</h4>
+      {children}
+    </WidgetContainer>
+  </div>
 );
