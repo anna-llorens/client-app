@@ -1,7 +1,9 @@
 import { FC } from "react";
-import { HeaderItems } from "./header-items";
 import styled from "styled-components";
 import Head from "next/head";
+import { HeaderTitle } from "./header-title";
+import { useCurrentUser, useLogout } from "@/hooks";
+import { HeaderLinks } from "./header-links";
 
 const HeaderWrapper = styled.header`
   background-color: #f6f8fb;
@@ -9,16 +11,28 @@ const HeaderWrapper = styled.header`
   z-index: 100;
   top: 0;
   width: 100%;
-  color: #52575C;
+  color: #52575c;
+`;
+const HeaderItemsWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 24px;
+  gap: 24px;
 `;
 
 export const Header: FC<{ appTitle?: string }> = ({
-  appTitle = "App title",
-}) => (
-  <HeaderWrapper>
-    <Head>
-      <title>{appTitle}</title>
-    </Head>
-    <HeaderItems />
-  </HeaderWrapper>
-);
+  appTitle = "Aervio Booking Platform",
+}) => {
+  return (
+    <HeaderWrapper>
+      <Head>
+        <title>{appTitle}</title>
+      </Head>
+      <HeaderItemsWrapper>
+        <HeaderTitle />
+        <HeaderLinks />
+      </HeaderItemsWrapper>
+    </HeaderWrapper>
+  );
+};
