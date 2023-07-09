@@ -1,9 +1,5 @@
-import {
-  AppSection,
-  BaBarChartStatus,
-  StatusPieChart,
-  Widget,
-} from "@/components";
+import { AppSection, BaBarChartStatus, Widget } from "@/components";
+import BasicPie from "@/components/charts/pie-chart";
 import { Kanban } from "@/components/kanban";
 import { useTheme } from "@mui/material/styles";
 import styled from "styled-components";
@@ -22,7 +18,7 @@ export default function Orders() {
       <Container>
         <Kanban />
         <Widget title="Orders status">
-          <StatusPieChart />
+          <BasicPie />
         </Widget>
         <Widget title="Incoming request">
           <BaBarChartStatus />
