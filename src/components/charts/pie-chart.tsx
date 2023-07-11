@@ -1,42 +1,20 @@
-import { FC } from "react";
-import { BarChart } from "@mui/x-charts/BarChart";
-import {
-  PieChart,
-  Pie,
-  Sector,
-  Cell,
-  ResponsiveContainer,
-  Legend,
-} from "recharts";
+import * as React from "react";
+import { PieChart } from "@mui/x-charts/PieChart";
 
-const data = [
-  { name: "New", value: 100 },
-  { name: "Active", value: 300 },
-  { name: "Completed", value: 700 },
-];
-const COLORS = ["#F7685B", "#FFB946", "#2ED47A", "#FF8042"];
-
-export const StatusPieChart: FC = () => {
+export default function BasicPie() {
   return (
-    <>
-      <PieChart width={250} height={350}>
-        <Pie
-          data={data}
-          cx="50%"
-          cy="50%"
-          innerRadius={40}
-          outerRadius={60}
-          fill="#8884d8"
-          paddingAngle={5}
-          dataKey="value"
-          label
-        >
-          {data.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-          ))}
-        </Pie>
-        <Legend verticalAlign="bottom" height={36} />
-      </PieChart>
-    </>
+    <PieChart
+      series={[
+        {
+          data: [
+            { id: 0, value: 10, label: "series A" },
+            { id: 1, value: 15, label: "series B" },
+            { id: 2, value: 20, label: "series C" },
+          ],
+        },
+      ]}
+      width={400}
+      height={200}
+    />
   );
-};
+}

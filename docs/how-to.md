@@ -1,4 +1,4 @@
-# Setup node dependencies
+# Managing npm packages
 
 1. Create Next.js repo with Typescript as templated
 
@@ -102,4 +102,20 @@ const SuccessSlider = styled(Slider)<SliderProps>(({ theme }) => ({
 export default function StyledCustomization() {
   return <SuccessSlider defaultValue={30} />;
 }
+```
+
+## Dynamic imports on Nextjs
+
+To Fix dynamic imports on Next js like:
+![plot](../public/images/import-server-error.png)
+
+Update `next.confg.js`
+
+- Add the package to the transpiled modules array list + disable experimentals
+
+```js
+const withTM = require("next-transpile-modules")([
+  "@mui/x-charts/BarChart",
+  "@mui/x-charts/LineChart",
+]);
 ```
