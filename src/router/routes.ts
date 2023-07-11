@@ -1,12 +1,13 @@
 export enum Routes {
-  About = "./about",
-  ClientSide = "/client-side",
-  Home = "/home",
   Logout = "./",
-  Profile = "./profile",
-  ServerSide = "/server-side",
-  StaticRendering = "/static-rendering",
+  About = "./about",
+  Home = "/home",
+  Profile = "/profile",
   Orders = "/orders",
+  ClientSide = "/dev/client-side",
+  ServerSide = "/dev/server-side",
+  StaticRendering = "/dev/static-rendering",
+  Grid = "/dev/grid",
 }
 
 export const protectedRoutes = [
@@ -14,6 +15,7 @@ export const protectedRoutes = [
   Routes.ClientSide,
   Routes.ServerSide,
   Routes.StaticRendering,
+  Routes.Grid,
 ];
 export const authRoutes = [Routes.Logout];
 export const publicRoutes = [
