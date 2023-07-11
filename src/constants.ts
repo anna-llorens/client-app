@@ -1,1 +1,1 @@
-export const AERVIO_LOGO = "/aervio-logo.png";
+export const AERVIO_LOGO = "/images/aervio-logo.png";
