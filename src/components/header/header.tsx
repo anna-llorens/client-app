@@ -1,9 +1,8 @@
 import { FC } from "react";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
-import Head from "next/head";
-import { HeaderTitle } from "./header-title";
-import { useCurrentUser, useLogout } from "@/hooks";
 import { HeaderLinks } from "./header-links";
+import { HeaderTitle } from "./header-title";
 
 const HeaderWrapper = styled.header`
   background-color: #f6f8fb;
@@ -19,18 +18,16 @@ const HeaderItemsWrapper = styled.div`
   justify-content: space-between;
   margin: 0 24px;
   gap: 24px;
+  
 `;
 
-export const Header: FC<{ appTitle?: string }> = ({
-  appTitle = "Aervio Booking Platform",
-}) => {
+export const Header: FC = () => {
+  const { t } = useTranslation();
   return (
     <HeaderWrapper>
-      <Head>
-        <title>{appTitle}</title>
-      </Head>
       <HeaderItemsWrapper>
         <HeaderTitle />
+        <span>{t("button_label")}</span>
         <HeaderLinks />
       </HeaderItemsWrapper>
     </HeaderWrapper>

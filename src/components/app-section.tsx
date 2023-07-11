@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 // Root page layout margins
 const AppSectionWrapper = styled.div<{ $grid: "row" | "column" }>`
-  margin-top: 80px !important;
+  margin-top: 80px !important; // Leave space for Header. TODO Check alternatives
   margin: 80px 10% 24px 10%;
   min-height: 81vh;
   display: flex;
@@ -12,13 +12,13 @@ const AppSectionWrapper = styled.div<{ $grid: "row" | "column" }>`
 `;
 
 export const AppSection: FC<{
-  appTitle?: string;
   $grid?: "row" | "column";
   children: any;
   style?: any;
-}> = ({ appTitle, $grid = "column", style, children }) => (
+  props?: any;
+}> = ({ $grid = "column", style, children }) => (
   <>
-    <Header appTitle={appTitle} />
+    <Header />
     <AppSectionWrapper $grid={$grid} style={style}>
       {children}
     </AppSectionWrapper>

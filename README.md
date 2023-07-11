@@ -10,7 +10,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## App Architecture
 
-![plot](./public/app-architechute.png)
+![plot](./public/images/app-architechute.png)
 
 ### Backlog
 

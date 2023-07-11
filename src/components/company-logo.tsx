@@ -1,8 +1,8 @@
 import { FC } from "react";
 
-import styled from "styled-components";
-import Image from "next/image";
 import { AERVIO_LOGO } from "@/constants";
+import Image from "next/image";
+import styled from "styled-components";
 
 const CompanyLogoContainer = styled.div``;
 
@@ -18,7 +18,7 @@ export const CompanyLogo: FC<{
       alt={alt}
       width={width}
       height={height}
-      style={{ marginBlock: "6px" }}
+      style={{ marginTop: "6px" }}
     />
   </CompanyLogoContainer>
 );
