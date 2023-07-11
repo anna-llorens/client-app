@@ -25,6 +25,7 @@
     "eslint": "^8.42.0",
     "eslint-config-next": "13.4.6",
     "fix-esm": "^1.0.1",
+    "fs": "^0.0.1-security",
     "graphql": "^16.6.0",
     "js-cookie": "^3.0.5",
     "next": "13.4.6",
