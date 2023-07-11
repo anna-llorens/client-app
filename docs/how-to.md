@@ -107,7 +107,7 @@ export default function StyledCustomization() {
 ## Dynamic imports on Nextjs
 
 To Fix dynamic imports on Next js like:
-![plot](../public/import-server-error.png)
+![plot](../public/images/import-server-error.png)
 
 Update `next.confg.js`
 

@@ -5,6 +5,9 @@
 - Protect app routes
 - Check how to improve material ui imports
 - Translations
+- Move images under images folder
+- Check how to add notifications on Next.js
+- Add tab company logo
 
 ## 🎨 UI
 
