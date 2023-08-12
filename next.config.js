@@ -2,7 +2,6 @@
 const withTM = require("next-transpile-modules")([
   "@mui/x-charts/BarChart",
   "@mui/x-charts/LineChart",
-  "@mui/x-charts/BarChart",
 ]);
 module.exports = withTM({
   experimental: {

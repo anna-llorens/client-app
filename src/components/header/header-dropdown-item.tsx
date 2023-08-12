@@ -1,13 +1,12 @@
 import { FC } from "react";
 
-import { BarChart } from "@mui/x-charts/BarChart";
 import * as React from "react";
 
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
-import { HeaderLink } from "./header-links";
 import { Routes } from "@/router";
+import { HeaderLink } from "./header-links";
 
 export const HeaderDropdownItem: FC<{ title: string }> = ({ title }) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -50,7 +49,7 @@ export const HeaderDropdownItem: FC<{ title: string }> = ({ title }) => {
             label="Static rendering example"
           />
         </MenuItem>
-        <BarChart
+        {/* <BarChart
           xAxis={[
             {
               id: "barCategories",
@@ -65,7 +64,7 @@ export const HeaderDropdownItem: FC<{ title: string }> = ({ title }) => {
           ]}
           width={500}
           height={300}
-        />
+        /> */}
       </Menu>
     </>
   );
