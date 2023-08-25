@@ -1,9 +1,8 @@
+import Head from "next/head";
 import { FC } from "react";
 import styled from "styled-components";
-import Head from "next/head";
-import { HeaderTitle } from "./header-title";
-import { useCurrentUser, useLogout } from "@/hooks";
 import { HeaderLinks } from "./header-links";
+import { HeaderTitle } from "./header-title";
 
 const HeaderWrapper = styled.header`
   background-color: #f6f8fb;

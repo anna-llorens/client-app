@@ -1,9 +1,7 @@
-import { HeaderTitle } from "./header-title";
-import styled from "styled-components";
 import { useCurrentUser, useLogout } from "@/hooks";
-import { useRouter } from "next/router";
 import { Routes } from "@/router";
 import Link from "next/link";
+import styled from "styled-components";
 import { HeaderDropdownItem } from "./header-dropdown-item";
 
 const HeaderLinksContainer = styled.div`
@@ -22,7 +20,6 @@ export const HeaderLink = (props: any) => (
 export const HeaderLinks = () => {
   const { user } = useCurrentUser();
   const { logout } = useLogout();
-  const router = useRouter();
   return (
     <HeaderLinksContainer>
       <HeaderDropdownItem title="Dev tools" />
